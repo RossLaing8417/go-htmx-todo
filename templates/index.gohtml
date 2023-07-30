@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Todo...</title>
+</head>
+
+<body>
+    <style>
+        li.todo-done {
+            text-decoration: line-through
+        }
+    </style>
+    <h1>{{.PageTitle}}</h1>
+    <ul>
+        {{range .Todos}}
+        <li {{if .Done}} class="todo-done" {{end}}>{{.Title}}</li>
+        {{end}}
+    </ul>
+</body>
+
+</html>
